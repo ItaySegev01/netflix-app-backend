@@ -40,7 +40,7 @@ seedRouter.get(
 const seedLists = async (array, type) => {
   for (let i = 0; i < array.length; i++) {
     const isSeries = type === 'movies' ? false : true;
-    const newList = await Content.aggregate([
+    const newList = await Content.aggregate([ // aggregate take something specified from mongoose and atach some data to it
       { $match: { isSeries: isSeries } },
       { $sample: { size: 8 } },
     ]);

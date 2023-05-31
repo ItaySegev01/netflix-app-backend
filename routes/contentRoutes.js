@@ -1,12 +1,13 @@
 import express from 'express';
 import Content from '../models/contentSchema.js';
 import expressAsyncHandler from 'express-async-handler';
+import {isAuth} from '../utils.js'
 
 const contentRouter = express.Router();
 
 contentRouter.get(
   '/',
-  //   isAuth,
+   isAuth,
   expressAsyncHandler(async (req, res) => {
     try {
       const data = await Content.find();
@@ -20,7 +21,7 @@ contentRouter.get(
 
 contentRouter.get(
   '/search',
-  //   isAuth,
+   isAuth,
   expressAsyncHandler(async (req, res) => {
     const query = req.query.query;
     const genre = req.query.genre;
