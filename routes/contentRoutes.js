@@ -46,7 +46,7 @@ contentRouter.get(
 
 contentRouter.get(
   '/get/:_id',
-  //   isAuth,
+     isAuth,
   expressAsyncHandler(async (req, res) => {
     try {
       const data = await Content.findById(req.params._id);
@@ -60,7 +60,7 @@ contentRouter.get(
 
 contentRouter.get(
   '/random',
-  //isAuth,
+  isAuth,
   expressAsyncHandler(async (req, res) => {
     const type = req.query.type;
 
