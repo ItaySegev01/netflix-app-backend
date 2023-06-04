@@ -18,7 +18,9 @@
     "express-async-handler": "^1.2.0",
     "jsonwebtoken": "^9.0.0",
     "mongodb": "^5.5.0",
-    "mongoose": "^7.2.1",
+    "mongoose": "^7.2.1"
+  },
+  "devDependencies": {
     "nodemon": "^2.0.22"
   }
 }
