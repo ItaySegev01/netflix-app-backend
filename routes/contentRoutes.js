@@ -11,7 +11,6 @@ contentRouter.get(
   expressAsyncHandler(async (req, res) => {
     try {
       const data = await Content.find();
-
       res.status(200).json(data.reverse());
     } catch (err) {
       res.status(500).json(err);
@@ -27,7 +26,6 @@ contentRouter.get(
     const genre = req.query.genre;
     try {
       let options = {};
-
       if (query) {
         options.title = { $regex: query, $options: 'i' };
       }
@@ -49,8 +47,8 @@ contentRouter.get(
      isAuth,
   expressAsyncHandler(async (req, res) => {
     try {
+      console.log('in');
       const data = await Content.findById(req.params._id);
-
       res.status(200).json(data);
     } catch (err) {
       res.status(500).json(err);
