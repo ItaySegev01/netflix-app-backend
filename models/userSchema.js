@@ -9,6 +9,12 @@ const userSchema = new mongoose.Schema(
       default: 'https://i.pravatar.cc/300',
       required: true,
     },
+    likedContent: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Content',
+      },
+    ]
   },
   { timestamps: true }
 );

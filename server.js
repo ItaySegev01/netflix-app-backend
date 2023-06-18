@@ -6,6 +6,7 @@ import seedRouter from './routes/seedRoutes.js';
 import contentRouter from './routes/contentRoutes.js';
 import listsRouter from './routes/listsRoutes.js';
 import authRouter from './routes/authRoutes.js';
+import userRouter from './routes/userRoutes.js';
 
 dotenv.config();
 
@@ -21,6 +22,7 @@ app.use('/api/seed', seedRouter);
 app.use('/api/contents', contentRouter);
 app.use('/api/lists', listsRouter);
 app.use('/api/auth', authRouter);
+app.use('/api/users', userRouter);
 
 mongoose
   .connect(process.env.MONGO_DB)

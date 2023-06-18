@@ -14,6 +14,20 @@ const contentScheme = new mongoose.Schema({
   limit: { type: String, required: true },
   genre: { type: String, required: true },
   isSeries: { type: Boolean, required: true, default: false },
+  numberLikes: { type: Number, required: true, default: 0 },
+  numberDisLikes: { type: Number, required: true, default: 0 },
+  likedUsers: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
+    },
+  ],
+  dislikedUsers: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
+    },
+  ],
 });
 
 const Content = mongoose.model('Content', contentScheme);

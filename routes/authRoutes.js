@@ -19,6 +19,7 @@ authRouter.post(
           profilePicture: user.profilePicture,
           email: user.email,
           token: generateToken(user),
+          likedContent: user.likedContent,
         });
       }
     } else {
@@ -42,8 +43,10 @@ authRouter.post(
       username: user.username,
       email: user.email,
       token: generateToken(user),
+      likedContent: user.likedContent,
     });
   })
 );
+
 
 export default authRouter;

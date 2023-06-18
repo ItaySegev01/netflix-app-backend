@@ -1,13 +1,13 @@
 import express from 'express';
 import Content from '../models/contentSchema.js';
 import expressAsyncHandler from 'express-async-handler';
-import {isAuth} from '../utils.js'
+import { isAuth } from '../utils.js';
 
 const contentRouter = express.Router();
 
 contentRouter.get(
   '/',
-   isAuth,
+  isAuth,
   expressAsyncHandler(async (req, res) => {
     try {
       const data = await Content.find();
@@ -20,7 +20,7 @@ contentRouter.get(
 
 contentRouter.get(
   '/search',
-   isAuth,
+  isAuth,
   expressAsyncHandler(async (req, res) => {
     const query = req.query.query;
     const genre = req.query.genre;
@@ -44,12 +44,65 @@ contentRouter.get(
 
 contentRouter.get(
   '/get/:_id',
-     isAuth,
+  isAuth,
   expressAsyncHandler(async (req, res) => {
     try {
-      console.log('in');
       const data = await Content.findById(req.params._id);
       res.status(200).json(data);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  })
+);
+
+contentRouter.patch(
+  '/update/like/:_id',
+  isAuth,
+  expressAsyncHandler(async (req, res) => {
+    try {
+      const content = await Content.findById(req.params._id);
+      const userId = req.body.userId;
+      if (content) {
+        if (content.likedUsers.includes(userId)) {
+          content.numberLikes--;
+          content.likedUsers.remove(userId);
+          const item = await content.save();
+          res.status(200).json(item);
+        } else {
+          content.numberLikes++;
+          content.likedUsers.push(userId);
+          const item = await content.save();
+          res.status(200).json(item);
+        }
+      } else {
+        res.status(404).send('content not found');
+      }
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  })
+);
+
+contentRouter.patch(
+  '/update/dislike/:_id',
+  isAuth,
+  expressAsyncHandler(async (req, res) => {
+    try {
+      const content = await Content.findById(req.params._id);
+      const userId = req.body.userId;
+      if (content) {
+        if (content.dislikedUsers.includes(userId)) {
+          content.numberDisLikes--;
+          content.dislikedUsers.remove(userId);
+          const item = await content.save();
+          res.status(200).json(item);
+        } else {
+          content.numberDisLikes++;
+          content.dislikedUsers.push(userId);
+          const item = await content.save();
+          res.status(200).json(item);
+        }
+      }
     } catch (err) {
       res.status(500).json(err);
     }
@@ -61,9 +114,7 @@ contentRouter.get(
   isAuth,
   expressAsyncHandler(async (req, res) => {
     const type = req.query.type;
-
     let content;
-
     try {
       if (type === 'series') {
         content = await Content.aggregate([

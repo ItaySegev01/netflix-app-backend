@@ -34,6 +34,7 @@ export const data = {
       password: bcrypt.hashSync('12345'),
       isAdmin: true,
       profilePicture: 'https://i.pravatar.cc/300',
+      likedContent: [],
     },
   ],
   content: [
@@ -56,6 +57,10 @@ export const data = {
       limit: '15',
       genre: 'Action',
       isSeries: false,
+      numberLikes: 100,
+      numberDisLikes: 25,
+      likedUsers: [],
+      dislikedUsers: [],
     },
     {
       title: 'The Dark Knight',
@@ -75,6 +80,10 @@ export const data = {
       limit: '15',
       genre: 'Action',
       isSeries: false,
+      numberLikes: 100,
+      numberDisLikes: 25,
+      likedUsers: [],
+      dislikedUsers: [],
     },
 
     {
@@ -94,6 +103,10 @@ export const data = {
       limit: '15',
       genre: 'Action',
       isSeries: false,
+      numberLikes: 100,
+      numberDisLikes: 25,
+      likedUsers: [],
+      dislikedUsers: [],
     },
     {
       title: 'Paranormal Activity',
@@ -111,6 +124,10 @@ export const data = {
       limit: '18',
       genre: 'Horror',
       isSeries: false,
+      numberLikes: 100,
+      numberDisLikes: 25,
+      likedUsers: [],
+      dislikedUsers: [],
     },
 
     {
@@ -131,6 +148,10 @@ export const data = {
       limit: '18',
       genre: 'Horror',
       isSeries: false,
+      numberLikes: 100,
+      numberDisLikes: 25,
+      likedUsers: [],
+      dislikedUsers: [],
     },
     {
       title: 'Spider-Man: Into the Spider-Verse',
@@ -149,6 +170,10 @@ export const data = {
       limit: '13',
       genre: 'Animation',
       isSeries: false,
+      numberLikes: 100,
+      numberDisLikes: 25,
+      likedUsers: [],
+      dislikedUsers: [],
     },
 
     {
@@ -169,6 +194,10 @@ export const data = {
       limit: '15',
       genre: 'Action',
       isSeries: false,
+      numberLikes: 100,
+      numberDisLikes: 25,
+      likedUsers: [],
+      dislikedUsers: [],
     },
     {
       title: 'Brave',
@@ -188,6 +217,10 @@ export const data = {
       limit: '8',
       genre: 'Animation',
       isSeries: false,
+      numberLikes: 100,
+      numberDisLikes: 25,
+      likedUsers: [],
+      dislikedUsers: [],
     },
     {
       title: 'Fight Club',
@@ -205,6 +238,10 @@ export const data = {
       limit: '18',
       genre: 'Detective',
       isSeries: false,
+      numberLikes: 100,
+      numberDisLikes: 25,
+      likedUsers: [],
+      dislikedUsers: [],
     },
 
     {
@@ -224,6 +261,10 @@ export const data = {
       limit: '13',
       genre: 'Comedy',
       isSeries: false,
+      numberLikes: 100,
+      numberDisLikes: 25,
+      likedUsers: [],
+      dislikedUsers: [],
     },
     {
       title: 'Priest',
@@ -242,6 +283,10 @@ export const data = {
       limit: '18',
       genre: 'Horror',
       isSeries: false,
+      numberLikes: 100,
+      numberDisLikes: 25,
+      likedUsers: [],
+      dislikedUsers: [],
     },
     {
       title: 'Avatar',
@@ -261,17 +306,21 @@ export const data = {
       limit: '12',
       genre: 'Fantasy',
       isSeries: false,
+      numberLikes: 100,
+      numberDisLikes: 25,
+      likedUsers: [],
+      dislikedUsers: [],
     },
     {
       title: 'The Lord of the Rings: The Fellowship of the Ring',
       description: `The Lord of the Rings: The Fellowship of the Ring is a 2001 epic fantasy adventure film directed by Peter Jackson, based on the first volume of J. R. R. Tolkien's The Lord of the Rings. The film is the first installment in The Lord of the Rings trilogy and was produced by Barrie M. Osborne, Fran Walsh, and Jackson, and written by Walsh, Philippa Boyens, and Jackson.`,
       img: 'https://d1nslcd7m2225b.cloudfront.net/Pictures/1024x536/4/7/7/1252477_fellowship.jpg',
       imgTitle:
-        'https://toppng.com/uploads/preview/the-fellowship-of-the-ring-movie-png-logo-lord-of-the-rings-logo-115630033912mm7b3nx77.png',
+        'https://images.fanart.tv/fanart/the-lord-of-the-rings-the-fellowship-of-the-ring-5232c108a0b11.png',
       imgThumb:
         'https://images.fanart.tv/fanart/the-lord-of-the-rings-the-fellowship-of-the-ring-58647a6dc80e8.jpg',
       imgVertical:
-        'https://m.media-amazon.com/images/M/MV5BZGMxZTdjZmYtMmE2Ni00ZTdkLWI5NTgtNjlmMjBiNzU2MmI5XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg',
+        'https://images.fanart.tv/fanart/the-lord-of-the-rings-the-fellowship-of-the-ring-522af84750c20.jpg',
       trailer: 'https://youtu.be/aStYWD25fAQ',
       movie: 'https://youtu.be/aStYWD25fAQ',
       duration: '2 hours 58 min',
@@ -279,6 +328,10 @@ export const data = {
       limit: '13',
       genre: 'Fantasy',
       isSeries: false,
+      numberLikes: 100,
+      numberDisLikes: 25,
+      likedUsers: [],
+      dislikedUsers: [],
     },
     {
       title: "Harry Potter and the Philosopher's Stone",
@@ -296,6 +349,10 @@ export const data = {
       limit: 'PG',
       genre: 'Fantasy',
       isSeries: false,
+      numberLikes: 100,
+      numberDisLikes: 25,
+      likedUsers: [],
+      dislikedUsers: [],
     },
 
     //Series
@@ -316,6 +373,10 @@ export const data = {
       limit: '15',
       genre: 'Animation',
       isSeries: true,
+      numberLikes: 100,
+      numberDisLikes: 25,
+      likedUsers: [],
+      dislikedUsers: [],
     },
     {
       title: `The Queen's Gambit`,
@@ -335,6 +396,10 @@ export const data = {
       limit: '18',
       genre: 'Action',
       isSeries: true,
+      numberLikes: 100,
+      numberDisLikes: 25,
+      likedUsers: [],
+      dislikedUsers: [],
     },
     {
       title: 'Lie to Me',
@@ -342,9 +407,9 @@ export const data = {
         'Lie to Me is an American crime drama television series that originally ran on the Fox network from January 21, 2009, to January 31, 2011. In the show, Dr. Cal Lightman and his colleagues in The Lightman Group accept assignments from third parties (commonly local and federal law enforcement), and assist in investigations, reaching the truth through applied psychology: interpreting microexpressions, through the Facial Action Coding System, and body language.',
       img: 'https://images.fanart.tv/fanart/lie-to-me-53624b7e36b47.jpg',
       imgTitle: 'https://images.fanart.tv/fanart/lie-to-me-50667f62b523d.png',
-      imgThumb: 'https://images.fanart.tv/fanart/lie-to-me-5c096765337e7.jpg',
+      imgThumb: 'https://images.fanart.tv/fanart/lie-to-me-5c0967655190c.jpg',
       imgVertical:
-        'https://images.fanart.tv/fanart/lie-to-me-53624b1cc10a5.jpg',
+        'https://images.fanart.tv/fanart/lie-to-me-58ff5719cfbe0.jpg',
       trailer: 'https://youtu.be/Kq6PiXEG9Eg',
       movie: 'https://youtu.be/Kq6PiXEG9Eg',
       duration: '42 min',
@@ -352,17 +417,21 @@ export const data = {
       limit: '16',
       genre: 'Crime Drama',
       isSeries: true,
+      numberLikes: 100,
+      numberDisLikes: 25,
+      likedUsers: [],
+      dislikedUsers: [],
     },
 
     {
       title: 'The Last Man on Earth',
       description:
         'The Last Man on Earth is an American post-apocalyptic comedy television series created by and starring Will Forte. The series premiered on Fox on March 1, 2015, and the fourth and final season concluded on March 8, 2018. The series follows the adventures of Phil Miller, an average man who becomes the last human being on Earth after a deadly virus spreads throughout the planet.',
-      img: 'https://images.fanart.tv/fanart/the-last-man-on-earth-57f134dc29c53.jpg',
+      img: 'https://images.fanart.tv/bigpreview/the-last-man-on-earth-5838c2d1b3ed2.jpg',
       imgTitle:
         'https://images.fanart.tv/fanart/the-last-man-on-earth-56c5fc0826ac9.png',
       imgThumb:
-        'https://images.fanart.tv/fanart/the-last-man-on-earth-607a3704e6db2.jpg',
+        'https://images.fanart.tv/fanart/the-last-man-on-earth-5838c2759589d.jpg',
       imgVertical:
         'https://images.fanart.tv/fanart/the-last-man-on-earth-54f6387c0388d.jpg',
       trailer: 'https://youtu.be/NUZu331xTFs',
@@ -372,6 +441,10 @@ export const data = {
       limit: '16',
       genre: 'Comedy',
       isSeries: true,
+      numberLikes: 100,
+      numberDisLikes: 25,
+      likedUsers: [],
+      dislikedUsers: [],
     },
     {
       title: 'Death Note',
@@ -390,6 +463,10 @@ export const data = {
       limit: '16',
       genre: 'Animation',
       isSeries: true,
+      numberLikes: 100,
+      numberDisLikes: 25,
+      likedUsers: [],
+      dislikedUsers: [],
     },
     {
       title: 'Vikings',
@@ -409,6 +486,10 @@ export const data = {
       limit: '18',
       genre: 'Detective',
       isSeries: true,
+      numberLikes: 100,
+      numberDisLikes: 25,
+      likedUsers: [],
+      dislikedUsers: [],
     },
     {
       title: 'Lucifer',
@@ -428,6 +509,10 @@ export const data = {
       limit: '15',
       genre: 'Comedy',
       isSeries: true,
+      numberLikes: 100,
+      numberDisLikes: 25,
+      likedUsers: [],
+      dislikedUsers: [],
     },
     {
       title: 'Love, Death & Robots',
@@ -446,6 +531,10 @@ export const data = {
       limit: '18',
       genre: 'Animation',
       isSeries: true,
+      numberLikes: 100,
+      numberDisLikes: 25,
+      likedUsers: [],
+      dislikedUsers: [],
     },
     {
       title: 'House of Dragon',
@@ -464,6 +553,10 @@ export const data = {
       limit: '16',
       genre: 'Fantasy',
       isSeries: true,
+      numberLikes: 100,
+      numberDisLikes: 25,
+      likedUsers: [],
+      dislikedUsers: [],
     },
     {
       title: 'Emily in Paris',
@@ -482,6 +575,10 @@ export const data = {
       limit: '14',
       genre: 'Comedy',
       isSeries: true,
+      numberLikes: 100,
+      numberDisLikes: 25,
+      likedUsers: [],
+      dislikedUsers: [],
     },
     {
       title: 'Doctor Who',
@@ -500,6 +597,10 @@ export const data = {
       limit: '13',
       genre: 'Action',
       isSeries: true,
+      numberLikes: 100,
+      numberDisLikes: 25,
+      likedUsers: [],
+      dislikedUsers: [],
     },
 
     {
@@ -520,6 +621,10 @@ export const data = {
       limit: '18',
       genre: 'Fantasy',
       isSeries: true,
+      numberLikes: 100,
+      numberDisLikes: 25,
+      likedUsers: [],
+      dislikedUsers: [],
     },
     {
       title: 'Grimm',
@@ -539,18 +644,22 @@ export const data = {
       limit: '13',
       genre: 'Detective',
       isSeries: true,
+      numberLikes: 100,
+      numberDisLikes: 25,
+      likedUsers: [],
+      dislikedUsers: [],
     },
     {
       title: 'Stranger Things',
       description:
         'Stranger Things is an American science fiction horror web television series created, written, and directed by the Duffer Brothers and released on Netflix. Set in the 1980s in the fictional town of Hawkins, Indiana, the season is about the disappearance of Will Byers and the ensuing search for him by his friends, family, and the local authorities.',
-      img: 'https://images.fanart.tv/fanart/stranger-things-5ccf1cdcc82b6.jpg',
+      img: 'https://images.fanart.tv/fanart/stranger-things-59fc61535ef3d.jpg',
       imgTitle:
-        'https://images.fanart.tv/fanart/stranger-things-57a0cd6a71fc6.png',
+        'https://images.fanart.tv/fanart/stranger-things-5e6b66756e223.png',
       imgThumb:
-        'https://images.fanart.tv/fanart/stranger-things-5a62665fea007.jpg',
+        'https://images.fanart.tv/fanart/stranger-things-58bd38a6798d1.jpg',
       imgVertical:
-        'https://images.fanart.tv/fanart/stranger-things-578c9b2cb3497.jpg',
+        'https://images.fanart.tv/bigpreview/stranger-things-5e6b66d0b701e.jpg',
       trailer: 'https://youtu.be/b9EkMc79ZSU',
       movie: 'https://youtu.be/b9EkMc79ZSU',
       duration: '1 hour',
@@ -558,6 +667,10 @@ export const data = {
       limit: '16',
       genre: 'Horror',
       isSeries: true,
+      numberLikes: 100,
+      numberDisLikes: 25,
+      likedUsers: [],
+      dislikedUsers: [],
     },
   ],
 };
